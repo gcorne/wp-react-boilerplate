@@ -17,6 +17,7 @@ class WP_React_Boilerplate {
 
 	static function enqueue_scripts() {
 		wp_enqueue_script( 'wp-react-boilerplate', plugins_url( 'build/script.js', __FILE__ ), array(), 'v0.0.1', true );
+		wp_enqueue_style( 'wp-react-boilerplate', plugins_url( 'build/style.css', __FILE__ ), array(), 'v0.0.1');
 	}
 
 }

@@ -1,6 +1,7 @@
 var path = require( 'path' );
 var webpack = require( 'webpack' );
 var NODE_ENV = process.env.NODE_ENV || 'development';
+var ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
 var webpackConfig = {
 	entry: path.join( __dirname, 'src', 'index.js' ),
@@ -15,11 +16,15 @@ var webpackConfig = {
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
 				loaders: [ 'babel-loader?cacheDirectory&optional[]=runtime' ]
+			},
+			{
+				test: /\.scss$/,
+				loader: ExtractTextPlugin.extract( 'style-loader', 'css!sass' )
 			}
 		]
 	},
 	resolve: {
-		extensions: [ '', '.json', '.js', '.jsx' ],
+		extensions: [ '', '.js', '.jsx' ],
 	},
 	node: {
 		fs: "empty",
@@ -31,7 +36,8 @@ var webpackConfig = {
 			'process.env': {
 				NODE_ENV: JSON.stringify( NODE_ENV )
 			}
-		})
+		}),
+		new ExtractTextPlugin( 'style.css' )
 	]
 };
 
