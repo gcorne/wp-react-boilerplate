@@ -1,25 +1,15 @@
-var React = require( 'react' ),
-	ReactDOM = require( 'react-dom' );
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Widget from './components/widget';
 
-require( './style.scss' );
-
-var Component = React.createClass({
-	render: function() {
-		return (
-			<div className="react-boilerplate-widget">
-				<h3>Hello, World!</h3>
-				<p>I made this thing.</p>
-			</div>
-		);
-	}
-});
-
-var widgets = document.querySelectorAll( 'div.react-demo-wrapper' );
+// Query DOM for all widget wrapper divs
+let widgets = document.querySelectorAll( 'div.react-demo-wrapper' );
 widgets = Array.prototype.slice.call( widgets );
 
+// Iterate over the DOM nodes and render a React component into each node
 widgets.forEach( function( wrapper ) {
 	ReactDOM.render(
-		<Component />,
+		<Widget />,
 		wrapper
 	);
 } );
