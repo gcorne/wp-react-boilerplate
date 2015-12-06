@@ -23,4 +23,8 @@ npm run dev
 
 `npm run dev` - Start webpack in "watch" mode so that the assets are automatically compiled when a file changes.
 
+## Documentation
+
+* [Writing Code](./docs/writing-code.md)
+
 
