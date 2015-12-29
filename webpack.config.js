@@ -1,3 +1,5 @@
+require( 'es6-promise' ).polyfill();
+
 var path = require( 'path' );
 var webpack = require( 'webpack' );
 var NODE_ENV = process.env.NODE_ENV || 'development';
