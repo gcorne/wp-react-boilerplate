@@ -12,8 +12,8 @@ var webpackConfig = {
 	// Entry points point to the javascript module that is used to generate the script file.
 	// The key is used as the name of the script.
 	entry: {
-		widget: './src/widget.js',
-		admin: './src/admin.js'
+		widget: './src/widget.jsx',
+		admin: './src/admin.jsx'
 	},
 	output: {
 		path: path.join( __dirname, 'build' ),
