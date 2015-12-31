@@ -20,7 +20,7 @@ The basic JavaScript building block is the module. A module is a single file tha
 Here is an example:
 
 
-src/components/message/index.js
+src/components/message/index.jsx
 ```js
 // bring in React as a dependency
 import React from 'react';
@@ -40,7 +40,7 @@ export default React.createClass({
 });
 ```
 
-src/components/dashboard/index.js
+src/components/dashboard/index.jsx
 ```js
 import React from 'react';
 
@@ -76,7 +76,7 @@ Installing the dependency adds the code to `node_modules` and `--save` includes 
 
 Once the dependency is installed, we can use it in our project.
 
-src/components/dashboard/index.js
+src/components/dashboard/index.jsx
 ```js
 import React from 'react';
 import Message from 'components/message';
