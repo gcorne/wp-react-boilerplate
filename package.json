@@ -32,6 +32,13 @@
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack --watch",
     "dev": "webpack --watch",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "mocha --compilers js:babel-core/register --require ./tests/setup.js --require ignore-styles ./tests/widget.test.jsx"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0", 
+    "ignore-styles": "^1.2.0",
+    "mocha": "^2.4.5",
+    "node-jsdom": "^3.1.5"
   }
 }
