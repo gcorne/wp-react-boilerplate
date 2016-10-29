@@ -17,12 +17,13 @@ class WP_React_Boilerplate {
 
 	static function enqueue_scripts() {
 		wp_enqueue_script( 'wp-react-boilerplate', plugins_url( 'build/widget.js', __FILE__ ), array(), 'v0.0.1', true );
-		wp_enqueue_style( 'wp-react-boilerplate', plugins_url( 'build/style.css', __FILE__ ), array(), 'v0.0.1');
+		wp_enqueue_style( 'wp-react-boilerplate', plugins_url( 'build/widget.css', __FILE__ ), array(), 'v0.0.1');
 	}
 
 
 	static function admin_enqueue_scripts() {
 		wp_enqueue_script( 'wp-react-boilerplate-admin', plugins_url( 'build/admin.js', __FILE__ ), array(), 'v0.0.1', true );
+		wp_enqueue_style( 'wp-react-boilerplate-admin', plugins_url( 'build/admin.css', __FILE__ ), array(), 'v0.0.1');
 
 	}
 

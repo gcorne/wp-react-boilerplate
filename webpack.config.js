@@ -53,7 +53,7 @@ var webpackConfig = {
 				NODE_ENV: JSON.stringify( NODE_ENV )
 			}
 		}),
-		new ExtractTextPlugin( 'style.css' )
+		new ExtractTextPlugin( '[name].css' )
 	]
 };
 
