@@ -9,8 +9,8 @@ export default React.createClass({
 	render() {
 		return (
 			<div className="react-boilerplate-widget">
-				<h3>Hello, World!</h3>
-				<p>I made this thing.</p>
+				<h3 ref="header">Hello, World!</h3>
+				<p ref="text">I made this thing.</p>
 			</div>
 		);
 	}
