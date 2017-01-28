@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // eslint-disable-next-line
 import {AdminHeader, Button, Notice} from "components/wp";
 
