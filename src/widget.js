@@ -1,6 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Widget from "./containers/widget";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Widget from './containers/widget';
 
 // Query DOM for all widget wrapper divs
 let widgets = document.querySelectorAll('div.react-demo-wrapper');
