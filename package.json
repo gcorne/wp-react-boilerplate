@@ -1,37 +1,54 @@
 {
   "name": "wp-react-boilerplate",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "The WP React Boilerplate proposes an alternative approach to writing complex UIs in WordPress.",
   "repository": {
     "type": "git"
   },
   "main": "index.js",
   "dependencies": {
-    "babel-core": "5.8.25",
-    "babel-eslint": "4.1.3",
-    "babel-loader": "5.3.2",
-    "babel-runtime": "5.8.25",
-    "classnames": "2.2.1",
-    "css-loader": "0.23.1",
-    "es6-promise": "3.0.2",
-    "eslint": "1.7.3",
-    "eslint-plugin-react": "3.6.3",
+    "babel-core": "5.8.38",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "5.4.2",
+    "babel-runtime": "5.8.38",
+    "classnames": "2.2.5",
+    "css-loader": "0.26.1",
+    "es6-promise": "4.0.5",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
     "extract-text-webpack-plugin": "1.0.1",
-    "node-sass": "3.10.1",
-    "react": "0.14.3",
-    "react-dom": "0.14.3",
-    "sass-loader": "3.1.2",
+    "node-sass": "4.3.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "sass-loader": "4.1.1",
     "style-loader": "0.13",
-    "webpack": "1.12.9",
-    "webpack-dev-server": "1.14.0"
+    "webpack": "1.14.0",
+    "webpack-dev-server": "1.16.2"
   },
   "engines": {
     "node": ">=0.8"
   },
   "scripts": {
-    "build": "NODE_ENV=production webpack",
+    "prestart": "npm install",
+    "package": "npm build && rm -rf node_modules",
+    "build": "npm run lint && NODE_ENV=production webpack",
+    "lint": "eslint --fix src && eslint src",
+    "start": "concurrently --kill-others --no-color \"npm run build-dev\" \"npm run watch\"  ",
     "build-dev": "webpack --watch",
-    "dev": "webpack --watch",
-    "lint": "eslint src"
+    "watch": "grunt"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "concurrently": "^3.1.0",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sync": "^0.6.2"
+  },
+  "sandbox": {
+    "dir": "/Users/astaniscia/WorkspacePrivato/Wordpress/wordpress_sandbox/site/wp-content/plugins/wp-react-boilerplate"
   }
 }
